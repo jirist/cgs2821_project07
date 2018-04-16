@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* CSS Document by Jiri Stanc, September 28, 2017 */
+
+/* ----------------- header navigation styles -------------------*/
+
+div#navbar {
+    width: 100%;
+    background-color: #f0e7db;
+}
+
+div#navbar::after {                 /* <------- clear float of buttons */
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+ul#menu {
+    list-style: none;
+    margin-left:0;
+    padding-left:0;
+}
+
+ul#menu li {
+    float:left;
+    line-height: 3em;
+}
+
+ul#menu li a.button {
+    display:inline-block;           /* <-------- button */
+    background-color: #f0e7db;
+    width:250px;
+    text-align: center;
+    border-right:5px solid #FAF7F3;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color:#DB8A2E;                  /* <--------- link */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.1s ease;      /* <--------- hover effect */
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+ul#menu li a.button.selected {
+    background-color: #FAF7F3;
+}
+
+ul#menu li a.button:visited {
+    color:#DB8A2E;
+}
+
+ul#menu li a.button:visited.selected {
+    color:#DB8A2E;
+}
+
+ul#menu li a.button:hover {
+    background-color: #DB8A2E;
+    color: #FAF7F3;
+}
+
+ul#menu li a.button:hover.selected {
+    background-color: #FAF7F3;
+    color:#DB8A2E;
+}
+
+
+
+/* ----------------- footer navigation styles -------------------*/
+/* ------ div container clearfix set at style.css apply -------- */
+/* ------------ link styles set at style.css apply ------------- */
+
+footer ul {
+    list-style: none;
+    margin-right:0;
+    padding-right:0;
+}
+
+footer li {
+        float: right;
+        line-height:1.7em;
+}
+
+footer li a {
+    display:inline-block;
+    padding: 0 15px;
+}
+
+footer li:nth-child(2) a {
+    border-left: 1px solid #DB8A2E;
+    border-right: 1px solid #DB8A2E;
+}

@@ -1,0 +1,350 @@
+@charset "UTF-8";
+
+/* CSS by Jiri Stanc; September 28, 2017 */
+
+
+/* page ---------------------------- */
+
+body {
+    margin:0;
+    padding:0;
+    background-color: #FAF7F3;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #292017;
+    font-size: 18px;
+    line-height: 1.7em;
+}
+
+
+
+/* containers ---------------------------- */
+
+div#page-container {
+    width: 1160px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #FAF7F3;
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+div#header-container {
+    width:100%;
+}
+
+div#content-container {
+    width:100%;
+}
+
+div#main-content-wrapper {    /* left section of the page */
+    float:left;
+    width:75%;
+    padding-right: 2.2em;
+    margin-right: 3%;
+    border-right: 5px solid #f0e7db;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+div#footer-container {
+    width:100%;
+}
+
+.clearfix {clear:both;}
+
+
+
+/* basic styles --------------------------- */
+
+header {
+    margin-bottom: 2.8em;   /* white space between header and content */
+}
+
+header img {
+    display: block;
+    width: 1080px;
+    height: 360px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav {
+    margin-top:4px;
+    padding: 0;
+}
+
+main {
+    margin-bottom: 4.15em;     /* white space between content and footer */
+}
+
+section + section {
+    margin-top: 3.5em;      /* white space between sections */
+}
+
+aside {
+    float: left;
+    width: 22%;
+    padding: 1.1em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: inset 0px 0px 50px 0px rgba(219, 138, 46, 0.1);
+    border-top: 2px solid #DB8A2E;
+}
+
+blockquote {
+    margin-top: 4.15em;       /* white space between section and blockquote */
+    padding: 1em 2em 1em 2em;
+    border-left: 2px solid #DB8A2E;
+    box-shadow: inset 0px 0px 50px 0px rgba(219, 138, 46, 0.2);
+}
+
+footer {
+    border-top: 2px solid #DB8A2E;
+    padding: 2em 0;
+}
+
+footer > div > div:first-child,
+footer > div > div:nth-child(2),
+footer > div > div:nth-child(3) {
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+footer > div > div:first-child {
+    width: 10%;
+}
+
+footer > div > div:nth-child(2) {
+    padding: 0 0 0 1%;
+    width: 20%;
+    font-style: italic;
+}
+
+footer > div > div:nth-child(3) {
+    padding: 0;
+    width: 70%;
+}
+
+footer > div > div:nth-child(3)::after {  /* clear float of footer menu buttons */
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+
+/* flex container --------------------------- */
+
+div.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    width: 100%;
+}
+
+div.flex-item {
+    width: 33.3%;
+    margin: 5px 10px 5px 10px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: inset 0px 0px 50px 0px rgba(219, 138, 46, 0.1);
+    border-top: 1px solid #DB8A2E;
+}
+
+
+
+/* images, videos ------------------------- */
+
+figure {
+    margin-top:0.4em;
+    margin-left: 0;
+    margin-right: 1.1em;
+    margin-bottom: 0;
+}
+
+figure img, iframe {
+    padding: 5px;
+    border: 1px solid #DB8A2E;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+figure.figure-wrap {
+    display:inline-block;
+    float:left;
+}
+
+figure.figure-wrap img {
+    width: 225px;
+    height: 150px;
+}
+
+figure#author img {
+    width: 384px;
+    height: 288px;
+}
+
+figure iframe {margin-top:0.35em;}
+
+
+
+/* tables --------------------------------- */
+
+table.specialty_toys {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    margin-top:5px;
+    margin-bottom: 2.5em;
+}
+
+table.specialty_toys > thead > tr > th:first-child {width:20%;}
+
+table.specialty_toys th, td {
+    border: 1px solid #DB8A2E;
+    padding: 1em;
+    font-size: 0.9em;
+    line-height:1.5em;
+}
+
+table.specialty_toys th {
+    background-color: #f0e7db;
+}
+
+table.color_wheel td {width:3em; line-height: 0.5em;}
+    #color_one {background-color: #FAF7F3;}
+    #color_two {background-color: #f0e7db;}
+    #color_three {background-color: #DB8A2E;}
+    #color_four {background-color: #B1834E;}
+    #color_five {background-color: #292017;}
+
+
+
+/* headings ---------------------------- */
+
+h1 {font-size: 2em; margin: 0;}
+h2 {font-size: 1.5em; margin: 0 0 1.5em 0;}
+h3 {font-size: 1.2em; margin: 2.3em 0 1em 0;}
+h4 {font-size: 1em; margin: 1.8em 0 0 0;}
+h5 {font-size: 1em; margin: 1em 0;}
+h6 {font-size: 1em; margin: 1em 0;}
+
+
+h1 {
+    background-color: #DB8A2E;
+    color: #FAF7F3;
+    padding: 0.47em 0.45em 0.47em 0.3em;
+}
+
+h3 {
+    padding-bottom: 0.6em;
+    margin-right: 8em;
+    border-bottom: 2px solid #f0e7db;
+}
+
+article > div:first-of-type > h4 {margin-top:0; padding-top:0.3em}
+article > hgroup > h4 {margin-top:0; padding-top:0.3em}
+aside h4 {margin-top:0;}
+
+aside h5 {
+    font-size: 0.9em;
+    margin-bottom:0;
+}
+
+
+
+/* paragraphs ---------------------------- */
+
+aside p {font-size: 0.85em; line-height: 1.6em;}
+aside h5 + p {                  /* calendar date */
+    margin-top: 0;
+    font-weight: bold;
+    font-style: italic;
+}
+
+article.reference-links p {margin-bottom:0;}
+main article:last-child p {margin-bottom:0;}
+aside p:last-child {margin-bottom:0;}
+
+blockquote p:first-of-type {margin-bottom:0;}
+blockquote p:last-of-type {
+    margin-top: 0.3em;
+    font-style: italic;
+    text-indent: 2em;
+}
+
+figure + p {margin-top:0;}    /* align the top of figure and paragraph */
+
+footer p {
+    margin-top:0;
+    margin-bottom:0;    
+}
+
+
+
+/* list styles ---------------------------- */
+
+ul {
+    margin-top:0;
+    margin-bottom:0;
+}
+
+table ul, .flex-item ul {
+    list-style-position: inside;
+    padding-left:0;
+}
+
+.flex-item ul {margin-top:1em;}
+
+li {line-height: 2em;}
+aside li {line-height:1.5em}
+table li, .flex-item li {line-height:1.5em;}
+
+.flex-item li {font-size:0.9em;}
+
+
+
+/* link styles ----------------------------- */
+
+a:link {
+    color:#DB8A2E;
+    font-weight:bold;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+a:visited {
+    color:#DB8A2E;
+    font-weight:bold;
+}
+
+a:hover {
+    color: #B1834E;
+    text-decoration: none;
+}
+
+a#active {
+    color: #B1834E;
+    text-decoration: none;
+}
+
+aside a, aside span {font-size: 0.85em;}
